@@ -1,0 +1,4 @@
+User-agent: *
+Disallow:
+
+Sitemap: https://earn-tube.online/sitemap.xml

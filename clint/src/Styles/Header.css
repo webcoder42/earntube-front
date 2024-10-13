@@ -1,0 +1,224 @@
+.header {
+  background-color: black;
+  color: white;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.site-title {
+  font-size: 2.5em;
+  color: white; /* Title color */
+}
+.dropdown-toggle{
+  color: white;
+
+}
+.dropdown-men{
+  background-color: #2e2929;
+  
+ 
+}
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 1.5em;
+  cursor: pointer;
+  color: white;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  transition: transform 0.3s ease-in-out;
+}
+
+.nav ul {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.nav li {
+  margin: 0 15px;
+}
+
+.nav a {
+  color: white; /* Navbar text color */
+  text-decoration: none;
+  font-size: 1em;
+  transition: color 0.3s ease-in-out;
+}
+
+.nav a.active {
+  color: #61dafb; /* Active link color */
+  font-weight: bold; /* Bold for active link */
+  border-bottom: 2px solid #61dafb; /* Underline for active link */
+}
+
+.nav a:hover {
+  color: #61dafb;
+}
+
+.nav .btn {
+  background-color: #61dafb;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 1em;
+  margin-left: 10px;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.nav .btn:hover {
+  background-color: #21a1f1;
+}
+  .close-menu {
+    display: none; /* Hide close button by default */
+  }
+
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  .nav {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 250px;
+    background-color: black; /* Navbar background color */
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 20px;
+    transform: translateX(100%);
+    transition: transform 0.3s ease-in-out;
+    overflow-y: auto;
+  }
+
+  .nav.open {
+    transform: translateX(0);
+  }
+
+  .nav ul {
+    flex-direction: column;
+    width: 100%;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+  }
+
+  .nav.open ul {
+    opacity: 1;
+  }
+
+  .nav li {
+    margin: 15px 0;
+    width: 100%;
+  }
+
+  .nav a {
+    width: 100%;
+    text-align: left;
+  }
+
+  .nav .btn {
+    width: 100%;
+    margin-left: 0;
+  }
+
+
+
+  .nav.open .close-menu {
+    display: block; /* Show close button when menu is open */
+    background: none;
+    border: none;
+    font-size: 1.5em;
+    cursor: pointer;
+    color: white;
+    align-self: flex-end;
+    margin-bottom: 20px;
+  }
+}
+/* Header.css */
+
+/* Ensure the dropdown opens in a column */
+.dropdown-men {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #333;
+  padding: 10px;
+  border-radius: 4px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  width: 200px; /* Adjust width as needed */
+}
+
+/* Hide the dropdown by default */
+.dropdown-men {
+  display: none;
+}
+
+/* Show the dropdown when the parent is open */
+.dropdown.open .dropdown-men {
+  display: flex;
+}
+
+/* Responsive adjustments */
+/* Header.css */
+
+/* General dropdown menu styling for mobile */
+@media (max-width: 768px) {
+  .nav ul {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .dropdown-men {
+    position: absolute;
+    top: 100%; /* Ensures it opens just below the trigger */
+    left: 0;
+    width: 100%; /* Full width on mobile */
+    background-color: #333; /* Background color for the dropdown */
+    padding: 10px;
+    border-radius: 4px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    transition: max-height 0.3s ease, opacity 0.3s ease;
+    max-height: 0; /* Initially hidden */
+    overflow: hidden;
+    opacity: 0; /* Hidden by default */
+  }
+
+  /* When the dropdown is open */
+  .dropdown.open .dropdown-men {
+    max-height: 500px; /* Adjust this to fit content height */
+    opacity: 1;
+  }
+
+  .nav {
+    
+  }
+
+  .menu-toggle {
+    margin-left: auto;
+  }
+
+  .nav ul li {
+    position: relative;
+  }
+}

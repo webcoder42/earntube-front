@@ -1,0 +1,53 @@
+.contact-list .contact-card {
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    padding: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .contact-list .link-warning {
+    color: #007bff;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  .contact-list .link-warning:hover {
+    text-decoration: underline;
+  }
+  .join-community {
+    padding: 10px;
+    background-color: #f7f9fc;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    margin: 20px 0;
+    
+  
+  
+    .community-link {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
+      color: #25D366; /* WhatsApp green color */
+      font-weight: bold;
+      font-size: 16px;
+      transition: all 0.3s ease;
+  
+      &:hover {
+        color: #128C7E; /* Darker shade of WhatsApp green */
+        text-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+      }
+  
+      .whatsapp-icon {
+        font-size: 34px;
+        margin-right: 8px;
+        transition: transform 0.3s ease;
+  
+        &:hover {
+          transform: scale(1.1);
+        }
+      }
+    }
+  }
+  
